@@ -1,6 +1,7 @@
 define openam::instance (
   $version,
   $instance = $name,
+  
 ) {
   if (!defined(Tomcat::Instance[$instance])) {
     tomcat::instance { $instance: }
