@@ -2,7 +2,7 @@
   "author": "Sander Bilo",
   "checksums": {
     "LICENSE": "6c4db32a2fa8717faffa1d4f10136f47",
-    "manifests/instance.pp": "74973a7ce071e74342da2590f52065b5",
+    "manifests/instance.pp": "90653028f5bbde825e3828dc4c302595",
     "manifests/init.pp": "1253f52b069a948404f7946bf061b194",
     "Modulefile": "9665a9d62943d6b52295552767f0e93b",
     "README.md": "59db64ecc7e44d24f93d9c4c7421691c"
