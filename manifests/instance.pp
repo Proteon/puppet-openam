@@ -137,10 +137,7 @@ define openam::instance (
     value   => $config_store_admin_password,
   } ->
   exec { "${instance}:config":
-    command => $data_store ? { 
-      'embedded' => "/bin/sleep 15; /usr/bin/sudo -u ${instance} java \$JAVA_OPTS -jar ${instance_home}/configuratortools/openam-configurator-tool-${version}.jar -f ${instance_home}/.install.conf", 
-      default => "/usr/bin/sudo -u ${instance} java \$JAVA_OPTS -jar ${instance_home}/configuratortools/openam-configurator-tool-${version}.jar -f ${instance_home}/.install.conf",
-      },
+    command =>  "/bin/sleep 15; /usr/bin/sudo -u ${instance} java \$JAVA_OPTS -jar ${instance_home}/configuratortools/openam-configurator-tool-${version}.jar -f ${instance_home}/.install.conf",
     creates => "${instance_home}/openam",
     cwd     => $instance_home,
     require => [Exec["${instance}:unzip:ssoconfiguratortools"], Tomcat::Instance[$instance]],
