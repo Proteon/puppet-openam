@@ -2,15 +2,23 @@
   "author": "Sander Bilo",
   "checksums": {
     "LICENSE": "6c4db32a2fa8717faffa1d4f10136f47",
-    "manifests/instance.pp": "d5c0134a556a7c337f0ee64de38671c6",
+    "manifests/instance.pp": "74973a7ce071e74342da2590f52065b5",
     "manifests/init.pp": "1253f52b069a948404f7946bf061b194",
-    "Modulefile": "bc0bcaf0ca50522fd4980c4f1e17d475",
+    "Modulefile": "9665a9d62943d6b52295552767f0e93b",
     "README.md": "59db64ecc7e44d24f93d9c4c7421691c"
   },
   "dependencies": [
     {
       "name": "proteon/tomcat",
       "version_requirement": "\u003e\u003d 0.1.15"
+    },
+    {
+      "name": "puppetlabs/inifile",
+      "version_requirement": "\u003e\u003d1.0.0"
+    },
+    {
+      "name": "proteon/maven",
+      "version_requirement": "\u003e\u003d1.0.0"
     }
   ],
   "description": "",
