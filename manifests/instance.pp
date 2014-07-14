@@ -1,3 +1,7 @@
+# == Define: openam::instance
+#
+# TODO
+#
 define openam::instance (
   $version,
   $admin_pw,

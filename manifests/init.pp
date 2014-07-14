@@ -1,2 +1,3 @@
+# class openam
 class openam {
 }
