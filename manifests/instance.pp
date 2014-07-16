@@ -1,3 +1,7 @@
+# == Define: openam::instance
+#
+# TODO
+#
 define openam::instance (
   $version,
   $admin_pw,
@@ -49,13 +53,13 @@ define openam::instance (
   exec { "${instance}:unzip:ssoadmintools":
     command => "/usr/bin/sudo -u ${instance} /usr/bin/unzip /usr/share/java/openam-distribution-ssoadmintools-${version}.zip -d ${instance_home}/admintools",
     creates => "${instance_home}/admintools",
-    require => File[$instance_home],
+    require => [Maven["/usr/share/java/openam-distribution-ssoadmintools-${version}.zip"], File[$instance_home]],
   }
 
   exec { "${instance}:unzip:ssoconfiguratortools":
     command => "/usr/bin/sudo -u ${instance} /usr/bin/unzip /usr/share/java/openam-distribution-ssoconfiguratortools-${version}.zip -d ${instance_home}/configuratortools",
     creates => "${instance_home}/configuratortools",
-    require => File[$instance_home],
+    require => [Maven["/usr/share/java/openam-distribution-ssoconfiguratortools-${version}.zip"], File[$instance_home]],
   }
 
   Ini_setting {
